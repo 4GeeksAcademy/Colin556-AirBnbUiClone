@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fffaf6;
+  --ink: #192026;
+  --muted: #6f7682;
+  --line: #e8ddd7;
+  --brand: #ea5b42;
+  --brand-soft: #ffd8ca;
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 110% -10%, #ffe8de 0, transparent 32%), var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.air-shadow {
+  box-shadow: 0 8px 30px rgba(25, 32, 38, 0.08);
+}
+
+.surface-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(25, 32, 38, 0.05);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
