@@ -96,40 +96,40 @@ export const listings: Listing[] = [
   },
 ];
 
-const roomData: Record<string, RoomDetail> = {
-  "1": {
-    ...listings[0],
-    hostName: "Maya",
-    hostRole: "Superhost | Hosting for 6 years",
-    maxGuests: 4,
-    bedrooms: 2,
-    beds: 2,
-    baths: 2,
+const hosts = ["Maya", "Jordan", "Iris", "Noah", "Elena", "Sami"];
+
+const roomData: Record<string, RoomDetail> = listings.reduce((acc, listing, index) => {
+  const hostName = hosts[index % hosts.length];
+
+  acc[listing.id] = {
+    ...listing,
+    hostName,
+    hostRole: `${listing.badge ?? "Host"} | Hosting for ${index + 2} years`,
+    maxGuests: 2 + (index % 3) * 2,
+    bedrooms: 1 + (index % 3),
+    beds: 1 + (index % 3),
+    baths: 1 + (index % 2),
     about:
-      "Wake up to panoramic ocean views, spend afternoons on a sun deck, and walk to neighborhood cafes in under ten minutes.",
+      "Designed for comfort and easy city access, this stay combines thoughtful interiors with practical amenities for short or medium-length trips.",
     highlights: [
-      "Dedicated workspace with fast Wi-Fi",
-      "Private deck with sunset lounge",
-      "Self check-in with smart lock",
+      "Fast Wi-Fi and work-friendly setup",
+      "Easy self check-in",
+      "Walkable access to food and transit",
     ],
     amenities: [
-      "Ocean view",
-      "Kitchen",
-      "Free parking",
-      "Washer",
-      "Air conditioning",
       "Wifi",
+      "Kitchen",
+      "Air conditioning",
+      "Washer",
       "Dedicated workspace",
-      "Pool",
+      "Essentials",
+      "Smart TV",
+      "Hair dryer",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1617104551722-3b2d513664f7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1616594039964-3d5d6a7b7e4f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1560448075-bb4f97d7f8cf?auto=format&fit=crop&w=1200&q=80",
-    ],
-  },
-};
+    gallery: [listing.image, listing.image, listing.image, listing.image, listing.image],
+  };
+
+  return acc;
+}, {} as Record<string, RoomDetail>);
 
 export const getRoomById = (id: string): RoomDetail | undefined => roomData[id];

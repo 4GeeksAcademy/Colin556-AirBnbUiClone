@@ -61,7 +61,7 @@ export default function Home() {
             This prototype mirrors Airbnb component relationships: shared headers, reusable listing cards,
             filter chips, and a room page fed by the same listing model.
           </p>
-        </div>
+        </section>
       </main>
 
       <MobileBottomNav />

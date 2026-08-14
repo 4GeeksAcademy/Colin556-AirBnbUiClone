@@ -32,7 +32,7 @@ export default function CatalogPage() {
             <div className="sticky top-24 h-[75vh] overflow-hidden rounded-3xl border border-[var(--line)] bg-gradient-to-br from-[#dce9ff] via-[#f5f8ff] to-[#f7ead9] p-5">
               <p className="font-display text-2xl text-[var(--ink)]">Map view</p>
               <p className="mt-2 max-w-xs text-sm text-[var(--muted)]">
-                Desktop split-screen mirrors Airbnb's browse-and-map pattern.
+                Desktop split-screen mirrors the Airbnb browse-and-map pattern.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-3">
                 <span className="rounded-full bg-white px-3 py-2 text-xs font-semibold text-[var(--ink)]">$240</span>
