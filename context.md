@@ -3,6 +3,33 @@
 ## Product Goal
 This project recreates three key Airbnb frontend views in Next.js to validate component architecture before designing a custom system. The clone focuses on realistic structure, reusable UI building blocks, and page-to-page continuity rather than backend integration.
 
+## Baseline Technical Setup
+This project is built from a standardized Next.js scaffold baseline:
+- Next.js 16 project.
+- TypeScript enabled.
+- Tailwind CSS enabled.
+- App Router enabled.
+- Scaffold command uses `npx create-next-app` with these flags:
+  - `--ts`
+  - `--tailwind`
+  - `--app`
+  - `--src-dir`
+  - `--eslint`
+  - `--import-alias "@/*"`
+
+Baseline command reference:
+
+```bash
+npx create-next-app@latest airbnb-ui-clone --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm
+```
+
+## Baseline Folder Organization
+The project structure must include a reusable UI component directory:
+- `/components` folder for shared UI pieces (organized by feature/domain as needed).
+
+When using the `src` directory convention, this is represented as:
+- `/src/components`
+
 ## Target User
 The primary user is a traveler searching for short-term stays. They want to:
 - Discover destination ideas and categories.
