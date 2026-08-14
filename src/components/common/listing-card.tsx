@@ -6,7 +6,7 @@ type ListingCardProps = {
   listing: Listing;
 };
 
-export function ListingCard({ listing }: ListingCardProps) {
+export const ListingCard = ({ listing }: ListingCardProps) => {
   return (
     <Link href={`/rooms/${listing.id}`} className="group block">
       <article className="space-y-3">
@@ -18,12 +18,12 @@ export function ListingCard({ listing }: ListingCardProps) {
             height={700}
             className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          <button
-            type="button"
+          <span
             className="absolute right-3 top-3 rounded-full bg-white/85 px-2 py-1 text-xs font-semibold text-[var(--ink)]"
+            aria-hidden="true"
           >
             Save
-          </button>
+          </span>
           {listing.badge ? (
             <span className="absolute left-3 top-3 rounded-full bg-white px-2 py-1 text-xs font-semibold text-[var(--ink)]">
               {listing.badge}
@@ -46,4 +46,4 @@ export function ListingCard({ listing }: ListingCardProps) {
       </article>
     </Link>
   );
-}
+};

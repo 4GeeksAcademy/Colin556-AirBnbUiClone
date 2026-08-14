@@ -6,6 +6,7 @@ export type Category = {
 
 export type Listing = {
   id: string;
+  categoryId: string;
   title: string;
   location: string;
   distance: string;

@@ -4,7 +4,7 @@ type MainHeaderProps = {
   compact?: boolean;
 };
 
-export function MainHeader({ compact = false }: MainHeaderProps) {
+export const MainHeader = ({ compact = false }: MainHeaderProps) => {
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--line)] bg-[var(--bg)]/90 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 md:px-8">
@@ -32,4 +32,4 @@ export function MainHeader({ compact = false }: MainHeaderProps) {
       </div>
     </header>
   );
-}
+};

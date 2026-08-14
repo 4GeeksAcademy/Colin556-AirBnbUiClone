@@ -3,7 +3,7 @@ type SectionHeadingProps = {
   subtitle?: string;
 };
 
-export function SectionHeading({ title, subtitle }: SectionHeadingProps) {
+export const SectionHeading = ({ title, subtitle }: SectionHeadingProps) => {
   return (
     <div className="mb-4 flex items-end justify-between">
       <div>
@@ -12,4 +12,4 @@ export function SectionHeading({ title, subtitle }: SectionHeadingProps) {
       </div>
     </div>
   );
-}
+};

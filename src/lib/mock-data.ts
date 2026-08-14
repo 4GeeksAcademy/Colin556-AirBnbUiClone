@@ -14,6 +14,7 @@ export const categories: Category[] = [
 export const listings: Listing[] = [
   {
     id: "1",
+    categoryId: "beach",
     title: "Oceanfront villa with private deck",
     location: "Santa Monica, California",
     distance: "12 miles away",
@@ -29,6 +30,7 @@ export const listings: Listing[] = [
   },
   {
     id: "2",
+    categoryId: "icons",
     title: "Minimal loft near art district",
     location: "Austin, Texas",
     distance: "4 miles away",
@@ -42,6 +44,7 @@ export const listings: Listing[] = [
   },
   {
     id: "3",
+    categoryId: "cabins",
     title: "A-frame cabin under pine trees",
     location: "Asheville, North Carolina",
     distance: "28 miles away",
@@ -56,6 +59,7 @@ export const listings: Listing[] = [
   },
   {
     id: "4",
+    categoryId: "countryside",
     title: "Design-forward penthouse with skyline view",
     location: "Chicago, Illinois",
     distance: "City center",
@@ -70,6 +74,7 @@ export const listings: Listing[] = [
   },
   {
     id: "5",
+    categoryId: "amazing-pools",
     title: "Sunny bungalow with plunge pool",
     location: "Tulum, Mexico",
     distance: "Beach access",
@@ -83,6 +88,7 @@ export const listings: Listing[] = [
   },
   {
     id: "6",
+    categoryId: "lakefront",
     title: "Historic townhouse in old quarter",
     location: "Lisbon, Portugal",
     distance: "Walkable center",

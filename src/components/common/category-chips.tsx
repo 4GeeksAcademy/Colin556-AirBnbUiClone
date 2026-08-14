@@ -4,7 +4,7 @@ type CategoryChipsProps = {
   items: Category[];
 };
 
-export function CategoryChips({ items }: CategoryChipsProps) {
+export const CategoryChips = ({ items }: CategoryChipsProps) => {
   return (
     <div className="no-scrollbar flex gap-3 overflow-x-auto pb-2">
       {items.map((item) => (
@@ -15,4 +15,4 @@ export function CategoryChips({ items }: CategoryChipsProps) {
       ))}
     </div>
   );
-}
+};
