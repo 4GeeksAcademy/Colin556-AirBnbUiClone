@@ -1,5 +1,1 @@
-import { RoomPage } from "@/components/pages/room-page";
-
-const Page = () => <RoomPage />;
-
-export default Page;
+export { RoomPage as default } from "@/components/pages/room-page";

@@ -1,5 +1,1 @@
-import { HomePage } from "@/components/pages/home-page";
-
-const Page = () => <HomePage />;
-
-export default Page;
+export { HomePage as default } from "@/components/pages/home-page";
